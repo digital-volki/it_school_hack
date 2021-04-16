@@ -1,13 +1,13 @@
 import styles from '../styles/Home.module.css'
 import HeaderComponent from '../components/HeaderComponent/'
-import SidePanel from '../components/Panel/'
+import SideBar from '../components/SideBar/'
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <SidePanel>
+      <SideBar>
         <HeaderComponent/>
-      </SidePanel>
+      </SideBar>
 
     </div>
   )

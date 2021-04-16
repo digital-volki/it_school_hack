@@ -8,11 +8,22 @@
 .par{
   width: 96px;
   height: 58px;
-  background: #6FD04F;
+  background: #191D2D;
   border-radius: 8px;
+  margin-bottom: 30px;
+  transform: skew(-20deg);
+}
+.p{
+  background:#6FD04F;
 }
 .logo{
   display:block;
   margin:auto;
   margin-bottom: 40px;
+}
+.barImag{
+  display:block;
+  margin:0 auto;
+  padding-top: 9px;
+  transform: skew(20deg);
 }
