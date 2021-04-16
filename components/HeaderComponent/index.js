@@ -36,6 +36,10 @@ export default function HeaderComponent ({children}){
               </div>
             </div>
           </div>
+          <div>
+            <img alt='photo' src={'/MaskGroup.png'} className={clsx(styles['photo'])}/>
+            <img alt='photo' src={'/arrow-down.svg'} className={clsx(styles['photo'])}/>
+          </div>
         </div>
       </div>
     <main>{children}</main>
