@@ -9,19 +9,76 @@
 
 }
 .fastStart{
-
-  margin-left: 73px;
   display: flex;
 }
+
 .textFastStart{
   padding-top: 15px;
   padding-left: 11.5px;
   padding-right: 6.29px;
   font-size: 18px;
-line-height: 15px;
+  margin-bottom: 0;
+  white-space: nowrap;
 color:#636F89;
 }
 .comand{
   padding-left: 26.38px;
 
+}
+
+.vec{
+  width: 20px;
+  height: 20px;
+  margin-top: 20px;
+}
+.parallelogram{
+  border: 2px solid #292E40;
+width: 137px;
+  margin-right: 40px;
+  transform: skew(-20deg);
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+color: #636F89;
+}
+.textPara{
+  transform: skew(20deg);
+  margin-left: 6px;
+  margin-top: 6px;
+  margin-bottom: 0px;
+
+}
+.chip{
+  display: flex;
+  transform: skew(20deg);
+}
+.textNumber{
+  margin-right: 2px;
+  margin-left: 10px;
+  margin-top: 2px;
+  font-weight: 500;
+font-size: 22px;
+line-height: 26px;
+margin-bottom:6px;
+color: #FFFFFF;
+}
+.chipimg{
+
+}
+.paralle{
+  position: absolute;
+  width: 38px;
+  height: 24px;
+  background: linear-gradient(82.02deg, #3187FF 2.99%, #7AB6FF 95.79%);
+  transform: skew(-20deg);
+border-radius: 2px;
+  left: 115px;
+  top:-5px;
+}
+.question{
+  transform: skew(15deg);
+  padding-left: 7px;
 }
