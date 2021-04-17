@@ -8,19 +8,24 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { PullQuestions } from "../../components/none/PullQuestions";
 import styles from "../../components/PlayerChallenge/plch.module.scss";
-import { PlayerComponent } from "../../components/PlayerChallenge/player";
+import { Question } from "../../components/Question";
+import { useRouter } from "next/router";
+// import { PlayerComponent } from "../../components/PlayerChallenge/player";
 
 
 export default function Battle() {
 
     const [num, setNum] = useState(0);
     const [questions] = useState(PullQuestions());
-    const [answers, setAnswers] = useState(new Map());
+    const [answers] = useState(new Map());
     const {handleSubmit, reset, register} = useForm();
+
+    const {push} = useRouter()
 
     return (
         <form onSubmit={handleSubmit((data) => {
             answers.set(num, data.answer)
+            setNum(s => s < questions.length - 1 ? s + 1 : s)
             reset()
         })}>
             <HeaderComponent/>
@@ -30,10 +35,19 @@ export default function Battle() {
                         <div className={clsx(styles['playerText'])}>
                             <p>Быстрые тесты</p>
                             <div>
-                                {Math.round((answers.size+1) / questions.length * 100)} %
+                                {Math.round((answers.size) / questions.length * 100)} %
                             </div>
                         </div>
-                        <PlayerComponent type={true}/>
+                        {questions.map((o, index) => (
+                            <div onClick={() => setNum(index)}>
+                                <Question
+                                    num={index}
+                                    now={index === num}
+                                    pass={answers.get(index) === o.answer}
+                                    answer={answers.get(index)}
+                                />
+                            </div>
+                        ))}
                     </div>
 
                 </div>
@@ -132,8 +146,12 @@ export default function Battle() {
                             }}/>
                         )}
                         <div className={'d-flex mt-2'}>
-                            <button className={'btn btn-outline-success'} type={'submit'}>
+                            <button className={'btn btn-success'} type={'submit'}>
                                 к следующему шагу
+                            </button>
+                            <button onClick={() => push('/')}
+                                className={'btn btn-outline-success'} type={'button'}>
+                                Закончить
                             </button>
                         </div>
                     </div>
