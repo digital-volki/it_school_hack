@@ -22,7 +22,7 @@ export const GamersComponent = ({ type }) =>{
             <img alt='chip' src={'/bx-star.svg'} className={clsx(styles['chipimg'])}/>
 
           </div>
-          <Link href='/'>
+          <Link href='/battle'>
           <a>
             <div className={clsx(styles['paralle'])}>
               <img alt='question' src={'/right.svg'}  className={clsx(styles['question'])}/>
