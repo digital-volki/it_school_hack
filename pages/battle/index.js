@@ -3,8 +3,8 @@ import HeaderComponent from "../../components/HeaderComponent";
 // import SidePanel from "../../components/Panel";
 import style from '../../styles/Battle.module.scss'
 import clsx from "clsx";
-// import dynamic from "next/dynamic";
-// const CodeWithMonaco = dynamic(import('../../components/Editor'), {ssr: false})
+import Timer from "../../components/Timer";
+
 
 export default function Battle() {
     return (
@@ -101,7 +101,7 @@ export default function Battle() {
                         {/*<CodeWithMonaco language="java" />*/}
                     </div>
                 </div>
-                {/*<Timer/>*/}
+                <Timer />
             </div>
         </div>
     )
