@@ -138,7 +138,9 @@ export default function Battle() {
                         </div>
                     </div>
                 </div>
-                <Timer />
+                <div className={'col-4'}>
+                    <Timer/>
+                </div>
             </div>
         </form>
     )
