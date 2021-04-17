@@ -21,9 +21,9 @@ export default function SidePanel ({children}){
             </div>
           </a>
         </Link>
-        <Link href='/'>
+        <Link href='/shop'>
           <a>
-            <div className={clsx(styles['par'], pathname === '/1' && styles['p'])}>
+            <div className={clsx(styles['par'], pathname === '/shop' && styles['p'])}>
               <img alt='game' src={'./bx-shopping-bag.svg'} className={clsx(styles['barImag'])}/>
             </div>
           </a>

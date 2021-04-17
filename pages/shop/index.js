@@ -1,5 +1,5 @@
 import HeaderComponent from "../../components/HeaderComponent";
-import SidePanel from "../../components/Panel";
+import SidePanel from "../../components/SideBar";
 import Card from "../../components/Card";
 import styles from '../../styles/Shop.module.css'
 
