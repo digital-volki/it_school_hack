@@ -1,8 +1,10 @@
 .SidePanel{
-  position: fixed;
+  position: absolute;
+  top:43px;
+  left:96px;
   width: 96px;
-  margin-left: 96px;
-  margin-right:50px;
+  height: 100%;
+z-index: 10;
   margin-top: 13px;
 }
 .par{

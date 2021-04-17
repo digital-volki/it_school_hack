@@ -1,68 +1,53 @@
-.batteleArena{
-  width: 706px;
-  height: 824px;
-  background: #121420;
-border-radius: 12px;
-}
-.logoArena{
+
+.history{
   position: absolute;
-  top:0;
+width:1582px;
+height:785px;
+background: #121420;
+border-radius: 12px;
+margin-top: 40px;
 }
-.logoImg{
+.historyHeader{
+
   position: relative;
-  left:  141px;
-  right: 141px;
-  top:80px;
+  width: 100%;
+  height: 88px;
+  background: #191D2D;
+border-radius: 12px 12px 0px 0px;
+
 }
-.logoText{
+
+.historyText{
   position: relative;
-  left:  249px;
-  right: 249px;
-  top:0px;
-  font-weight: bold;
-  font-size: 32px;
-  line-height: 38px;
+  width: 1526px;
+  top:30px;
+  margin-left: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+.Text{
+  vertical-align:middle;
+  height: 32px;
+  font-weight: 500;
+  font-size: 20px;
+  margin: 0;
+  line-height: 24px;
   text-transform: uppercase;
   color: #FFFFFF;
 }
-.panel{
-  width: 642px;
-height: 73px;
-background: #191D2D;
-border-radius: 12px;
-margin-top: 81px;
-margin-left: auto;
-margin-right: auto;
-}
-.button{
-  width: 214px;
-  height: 73px;
-  margin: 0 auto;
-  background: #191D2D;
-border-radius: 12px;
-font-weight: bold;
-font-size: 18px;
-line-height: 25px;
-outline: 0;
-border: 0;
-text-transform: uppercase;
-color: #575E78;
-z-index: 2;
-}
-.buttonActive{
-  width: 214px;
-  height: 73px;
-  margin: 0 auto;
-background: linear-gradient(98.01deg, #89D542 0%, #87CE58 50.1%, #97EA51 101.26%);
-border-radius: 12px;
-font-weight: bold;
-font-size: 18px;
-line-height: 25px;
-outline: 0;
-border: 0;
-text-transform: uppercase;
-color: #fff;
-z-index: 2;
+.title{
+  position:relative;
+  display: flex;
+  justify-content: space-between;
+  width: 1377px;
+  margin-left: 54px;
+  margin-top: 24px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #575E78;
+
 }
 .playerComponent{
   position: relative;
@@ -70,7 +55,7 @@ z-index: 2;
   margin-top: 24px;
   margin-left: auto;
   margin-right: auto;
-  width: 642px;
+  width: 1518px;
   height: 78px;
 
   background: #191D2D;
@@ -155,28 +140,4 @@ line-height: 19px;
 
 
 color: #E48D37;
-}
-.par{
-  width: 56px;
-  height: 32px;
-  background: #191D2D;
-  border-radius: 8px;
-  margin-top: 49px;
-  transform: skew(-20deg);
-
-}
-.parText{
-  display: block;
-  margin-left: 23px;
-  padding-top: 6px;
-
-  font-weight: 500;
-font-size: 18px;
-line-height: 21px;
-color: #FFFFFF;
-transform: skew(20deg);
-
-}
-.p{
-  background:#6FD04F;
 }
