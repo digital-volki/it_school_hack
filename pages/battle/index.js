@@ -98,7 +98,9 @@ export default function Battle() {
                                 </tbody>
                             </table>
                         </div>
-                        {/*<CodeWithMonaco language="java" />*/}
+                        <div id={'code_r'} style={{
+                            height: '500px'
+                        }}/>
                     </div>
                 </div>
                 <Timer />
