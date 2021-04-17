@@ -4,3 +4,63 @@
   background: #121420;
 border-radius: 12px;
 }
+.logoArena{
+  position: absolute;
+  top:0;
+}
+.logoImg{
+  position: relative;
+  left:  141px;
+  right: 141px;
+  top:80px;
+}
+.logoText{
+  position: relative;
+  left:  249px;
+  right: 249px;
+  top:0px;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 38px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.panel{
+  width: 642px;
+height: 73px;
+background: #191D2D;
+border-radius: 12px;
+margin-top: 81px;
+margin-left: auto;
+margin-right: auto;
+}
+.button{
+  width: 214px;
+  height: 73px;
+  margin: 0 auto;
+  background: #191D2D;
+border-radius: 12px;
+font-weight: bold;
+font-size: 18px;
+line-height: 25px;
+outline: 0;
+border: 0;
+text-transform: uppercase;
+color: #575E78;
+z-index: 2;
+}
+.buttonActive{
+  width: 214px;
+  height: 73px;
+  margin: 0 auto;
+background: linear-gradient(98.01deg, #89D542 0%, #87CE58 50.1%, #97EA51 101.26%);
+border-radius: 12px;
+font-weight: bold;
+font-size: 18px;
+line-height: 25px;
+outline: 0;
+border: 0;
+text-transform: uppercase;
+color: #fff;
+z-index: 2;
+}
