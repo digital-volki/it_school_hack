@@ -1,9 +1,9 @@
-import HeaderComponent from "../../components/HeaderComponent";
 import SidePanel from "../../components/SideBar";
 import Card from "../../components/Card";
 import styles from '../../styles/Shop.module.css'
 import clsx from "clsx";
 import {Drop} from "../../components/icons";
+import HeaderComponent from "../../components/HeaderComponent";
 
 export default function Shop() {
     function Alrt() {
@@ -58,20 +58,18 @@ export default function Shop() {
                     </ul>
                 </div>
             </div>
-
-            <div className="d-flex flex-wrap" style={{marginLeft: '16%'}}>
-                <Card img={"/MerchSweatshot.png"} name={'свитшот унисекс белый'} price={'15000'}/>
-                <Card img={"/MerchSweatshot.png"} name={'свитшот унисекс белый'} price={'15000'}/>
-                <Card img={"/MerchSweatshot.png"} name={'свитшот унисекс белый'} price={'15000'}/>
-                <Card img={"/MerchSweatshot.png"} name={'свитшот унисекс белый'} price={'15000'}/>
-                <Card img={"/MerchSweatshot.png"} name={'свитшот унисекс белый'} price={'15000'}/>
-                <Card img={"/MerchSweatshot.png"} name={'свитшот унисекс белый'} price={'15000'}/>
-                <Card img={"/MerchSweatshot.png"} name={'свитшот унисекс белый'} price={'15000'}/>
-                <Card img={"/MerchSweatshot.png"} name={'свитшот унисекс белый'} price={'15000'}/>
+            <div className="d-flex flex-wrap" style={{ marginLeft: '16%' }}>
+                <Card img ={"/MerchSweatshot.png"} name={'свитшот унисекс белый'} price={'15000'}/>
+                <Card img ={"/MerchSweatshot.png"} name={'свитшот унисекс белый'} price={'15000'}/>
+                <Card img ={"/MerchSweatshot.png"} name={'свитшот унисекс белый'} price={'15000'}/>
+                <Card img ={"/MerchSweatshot.png"} name={'свитшот унисекс белый'} price={'15000'}/>
+                <Card img ={"/MerchSweatshot.png"} name={'свитшот унисекс белый'} price={'15000'}/>
+                <Card img ={"/MerchSweatshot.png"} name={'свитшот унисекс белый'} price={'15000'}/>
+                <Card img ={"/MerchSweatshot.png"} name={'свитшот унисекс белый'} price={'15000'}/>
+                <Card img ={"/MerchSweatshot.png"} name={'свитшот унисекс белый'} price={'15000'}/>
             </div>
 
-            <button className="btn text-white" onClick={Alrt} style={{
-                background: 'linear-gradient(98.01deg, #89D542 0%, #87CE58 50.1%, #97EA51 101.26%)',
+            <button className="btn text-white" onClick={Alrt} style={{background: 'linear-gradient(98.01deg, #89D542 0%, #87CE58 50.1%, #97EA51 101.26%)',
                 borderRadius: '6px',
                 width: '309px',
                 height: '61px',
@@ -83,9 +81,10 @@ export default function Shop() {
                 color: '#FFFFFF',
                 marginLeft: '36%',
                 marginRight: '36%'
-            }}>
+                }}>
                 Показать больше
             </button>
+
 
 
         </div>

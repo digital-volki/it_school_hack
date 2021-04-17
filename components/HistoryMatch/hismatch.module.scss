@@ -35,6 +35,9 @@ border-radius: 12px 12px 0px 0px;
   text-transform: uppercase;
   color: #FFFFFF;
 }
+.titileandbutton{
+  margin-left: 32px;
+}
 .title{
   position:relative;
   display: flex;
@@ -53,8 +56,7 @@ border-radius: 12px 12px 0px 0px;
   position: relative;
   top:24px;
   margin-top: 24px;
-  margin-left: auto;
-  margin-right: auto;
+
   width: 1518px;
   height: 78px;
 
@@ -67,35 +69,27 @@ border-radius: 8px;
   margin-left: 15px;
   margin-top: 23px;
 }
-.dateAcc{
+.dateAll{
+  width: 1482px;
+  display: flex;
+  justify-content: space-between;
+}
+.dateAcc2{
   display: flex;
 }
 .dateAcc1{
   display: flex;
-  margin-left: 60px;
   margin-top: 30px;
 }
-.InfoPlayer{
-  height: 32px;
-  margin-top:17px;
-  margin-left: 5px;
+.dateAcc3{
+  display: flex;
+  transform: translateX(-40px);
+
 }
-.Info{
-  margin-top: 0px;
-  margin-bottom: 0;
-  font-weight: 500;
-font-size: 16px;
-text-transform: uppercase;
-color: #FFFFFF;
-}
-.Info2{
+.dateAcc4{
+  display: flex;
   margin-top: 30px;
-  margin-bottom: 0;
-  font-weight: 500;
-  margin-left: 5px;
-font-size: 16px;
-text-transform: uppercase;
-color: #FFFFFF;
+
 }
 .Info1{
   margin-bottom: 0;
@@ -103,41 +97,48 @@ color: #FFFFFF;
 font-size: 14px;
 line-height: 17px;
 text-transform: none;
+margin-left: 5px;
 color: #575E78;
 }
-.chipimg{
-  margin-right: 11.5px;
-}
-.paralle{
-  margin-top: 23px;
-margin-left: 55px;
-  width: 38px;
-  height: 32px;
-  background: linear-gradient(82.02deg, #3187FF 2.99%, #7AB6FF 95.79%);
-  transform: skew(-20deg);
-border-radius: 2px;
-
-}
-.question{
-  transform: skew(15deg);
-padding-left: 7px;
-padding-top: 3px;
-}
-.allTRan{
-  display: flex;
-  height: 25px;
-  margin-top:30px;
-  margin-left: 30px;
-}
-.Transistor{
-  height: 18px;
-  margin-top: 2px;
+.Info2{
+  margin-top: 20px;
   margin-bottom: 0;
+  font-weight: 500;
+  margin-left: 5px;
+font-size: 16px;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+.Info{
+  height: 15px;
+  margin-bottom: 0;
+  font-weight: 500;
+  margin-left: 5px;
+font-size: 16px;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+.chipimg{
+  height: 15px;
+  margin-top: 4px;
+}
+.chet{
+  margin-top: 33px;
+  margin-bottom: 0;
+  transform: translateX(-50px);
   font-weight: 500;
 font-size: 16px;
 line-height: 19px;
-/* identical to box height */
-
-
-color: #E48D37;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+.chet1{
+  margin-top: 33px;
+  margin-bottom: 0;
+  transform: translateX(8px);
+  font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+text-transform: uppercase;
+color: #FFFFFF;
 }
