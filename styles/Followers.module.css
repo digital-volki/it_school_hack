@@ -82,10 +82,7 @@
     line-height: 24px;
     text-transform: uppercase;
     color: #FFFFFF;
-    padding-left: 32px;
-    padding-top: 33px;
-    padding-bottom: -30px;
-    padding-right: 32px;
+    padding: 33px;
     display: flex;
 
 }
