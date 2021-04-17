@@ -2,6 +2,8 @@ import {useState} from 'react';
 import styles from './battle.module.scss'
 import clsx from "clsx";
 import {GamersComponent} from './gamers'
+import TransComponent from '../transition/trans'
+
 
 export default function BattleArena (){
   const [type, setType] = useState(0);
@@ -18,10 +20,8 @@ export default function BattleArena (){
             <button onClick={() => setType(0)} className={clsx(styles['button'], type === 0 && styles['buttonActive'])} >все игроки</button>
             <button onClick={() => setType(1)} className={clsx(styles['button'], type === 1  && styles['buttonActive'])}  >Подписчики</button>
             <button onClick={() => setType(2)} className={clsx(styles['button'], type === 2 && styles['buttonActive'])}  >Подписка</button>
-          <GamersComponent type={type}/>
-            <div className={clsx(styles['par'], type === 0 && styles['p'])}>
-              <p className={clsx(styles['parText'])}>{type}</p>
-            </div>
+            <GamersComponent type={type}/>
+            <TransComponent />
         </div>
       </div>
 
