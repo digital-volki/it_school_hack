@@ -1,0 +1,39 @@
+.card{
+    width: 353px;
+    background: #191D2D;
+    border-radius: 12px;
+    padding: 44px 24px 40px;
+    margin-right: 31px;
+    margin-bottom: 31px;
+
+}
+
+.img_product{
+    height: 311px;
+    width: 235px;
+    transform: translate(12%);
+
+}
+
+.name_product{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FFFFFF;
+    white-space: nowrap;
+    margin-top: 25px;
+}
+
+
+.price_product{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 8px;
+}
