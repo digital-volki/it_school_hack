@@ -7,7 +7,7 @@ export const FastGame = ({active, setActive}) =>{
   const [type, setType] = useState(true);
 
     return(
-      <div className={active ? styles.fastactive : styles.fastGame} onClick = {()=> setActive(false)} >
+      <div className={!active ? styles.fastGame : styles.fastactive} onClick = {()=> setActive(false)} >
         <div className={styles.fastGameContent} onClick={e => e.stopPropagation()}>
           <div className={styles.all}>
             <div className={clsx(styles['playerText'])}>
@@ -20,7 +20,7 @@ export const FastGame = ({active, setActive}) =>{
             <button onClick={() => setType(false)} className={clsx(styles['button'], type === false  && styles['buttonActive'])}  >Подписчики</button>
           </div>
           {type ?
-            <FastGameSolo/> : ""  
+            <FastGameSolo/> : ""
           }
         </div>
       </div>

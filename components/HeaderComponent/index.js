@@ -6,7 +6,7 @@ import {useState} from 'react'
 
 
 export default function HeaderComponent ({children, chkPanel = false}){
-  const [fastActive, setFastActive] = useState(true);
+  const [fastActive, setFastActive] = useState(false);
   return(
     <>
     <div className={clsx(styles['Header'])} style={{ justifyContent: chkPanel ? 'flex-end' : 'space-between'  }}>
