@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const PlayerComponent = ({type}) => {
   return(
-    <>
+    <Link href={'/battle'}>
       <div className={clsx(styles['playerComponent'])}>
         <div className={clsx(styles['dateAcc'])}>
           <img alt='vladphoto' src={'./vlad.png'} className={clsx(styles['avatar'])}/>
@@ -27,6 +27,6 @@ export const PlayerComponent = ({type}) => {
 
         </div>
       </div>
-    </>
+    </Link>
   )
 }

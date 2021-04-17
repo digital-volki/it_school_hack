@@ -4,13 +4,12 @@ import Link from 'next/link'
 import {FastGame} from '../Pop-up/FastGame/'
 import {useState} from 'react'
 
-export default function HeaderComponent ({children, chkPanel = false}){
 
+export default function HeaderComponent ({children, chkPanel = false}){
   return(
     <>
-    <div className={clsx(styles['Header'])}>
-
-      <div className={clsx(styles['fastStart'])}>
+    <div className={clsx(styles['Header'])} style={{ justifyContent: chkPanel ? 'flex-end' : 'space-between'  }}>
+      <div className={clsx(styles['fastStart'], chkPanel && 'd-none')}>
         <img alt='faststart' src={'/bx-category.svg'}/>
         <p className={clsx(styles['textFastStart'])} onClick={()=> setFastActive(true)}>Быстрые тесты</p>
         <img alt='faststart' src={'/logo.svg'} className={clsx(styles['comand'])}/>
