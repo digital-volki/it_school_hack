@@ -16,8 +16,8 @@ export const FastGame = ({active, setActive}) =>{
             </div>
           </div>
           <div className={styles.allButton}>
-            <button onClick={() => setType(true)} className={clsx(styles['button'], type === true && styles['buttonActive'])} >все игроки</button>
-            <button onClick={() => setType(false)} className={clsx(styles['button'], type === false  && styles['buttonActive'])}  >Подписчики</button>
+            <button onClick={() => setType(true)} className={clsx(styles['button'], type === true && styles['buttonActive'])} >одиночные</button>
+            <button onClick={() => setType(false)} className={clsx(styles['button'], type === false  && styles['buttonActive'])}  >командные</button>
           </div>
           {type ?
             <FastGameSolo/> : ""
