@@ -1,12 +1,12 @@
-import Timer from "../../components/Timer";
+// import Timer from "../../components/Timer";
 import HeaderComponent from "../../components/HeaderComponent";
 import Row from "../../components/Row";
 import SidePanel from "../../components/SideBar";
-import Player from "../../components/PlayerChallenge/player";
+import { PlayerComponent } from "../../components/PlayerChallenge/player";
 import styles from "../../styles/Followers.module.css"
 import clsx from "clsx";
 import {AddFriend, Drop, Search} from "../../components/icons";
-import BattleArena from "../../components/BattleArena";
+// import BattleArena from "../../components/BattleArena";
 import {useState} from "react";
 
 
@@ -134,12 +134,12 @@ export default function Battle() {
                     </div>
                 </div>
                 <div>
-                    <Player/>
-                    <Player/>
-                    <Player/>
-                    <Player/>
-                    <Player/>
-                    <Player/>
+                    <PlayerComponent/>
+                    <PlayerComponent/>
+                    <PlayerComponent/>
+                    <PlayerComponent/>
+                    <PlayerComponent/>
+                    <PlayerComponent/>
                 </div>
 
 
