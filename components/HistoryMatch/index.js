@@ -1,6 +1,7 @@
 import styles from './hismatch.module.scss'
 import clsx from "clsx";
 import ResultMatch from "./result"
+import TransComponent from '../transition/trans'
 
 export default function hismatch (){
   return(
@@ -12,14 +13,17 @@ export default function hismatch (){
             <img alt="clock" src={'./clock.svg'}/>
           </div>
         </div>
-        <div className={styles.title}>
-          <p>Победитель</p>
-          <p>Проигравший</p>
-          <p>Счет</p>
-          <p>Награда</p>
-          <p>Время</p>
+          <div className={styles.title}>
+            <p>Победитель</p>
+            <p>Проигравший</p>
+            <p>Счет</p>
+            <p>Награда</p>
+            <p>Время</p>
+          </div>
+          <div className={styles.titileandbutton}>
+            <ResultMatch/>
+            <TransComponent/>
         </div>
-        <ResultMatch/>
       </div>
     </>
   )
