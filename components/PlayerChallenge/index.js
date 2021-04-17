@@ -3,11 +3,14 @@ import clsx from "clsx";
 import Link from 'next/link'
 import PlayerComponent from './player'
 import BatteleArena from '../BattleArena'
+import HistoryMatch from '../HistoryMatch'
+
 
 export default function playerChallenge ({children}){
   return(
     <>
     <div className={styles.all}>
+      <div className={styles.allHeith}>
         <div className={clsx(styles['playerChallenge'])}>
           <div className={clsx(styles['playerChallengeHeader'])}>
           <div className={clsx(styles['playerText'])}>
@@ -30,6 +33,9 @@ export default function playerChallenge ({children}){
           </div>
 
         </div>
+        </div>
+        <HistoryMatch/>
+
       </div>
       <main>
         {children}

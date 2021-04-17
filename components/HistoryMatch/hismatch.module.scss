@@ -1,0 +1,143 @@
+
+.history{
+  position: absolute;
+width:1582px;
+height:785px;
+background: #121420;
+border-radius: 12px;
+margin-top: 40px;
+}
+.historyHeader{
+
+  position: relative;
+  width: 100%;
+  height: 88px;
+  background: #191D2D;
+border-radius: 12px 12px 0px 0px;
+
+}
+
+.historyText{
+  position: relative;
+  width: 1526px;
+  top:30px;
+  margin-left: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+.Text{
+  vertical-align:middle;
+  height: 32px;
+  font-weight: 500;
+  font-size: 20px;
+  margin: 0;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.title{
+  position:relative;
+  display: flex;
+  justify-content: space-between;
+  width: 1377px;
+  margin-left: 54px;
+  margin-top: 24px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #575E78;
+
+}
+.playerComponent{
+  position: relative;
+  top:24px;
+  margin-top: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1518px;
+  height: 78px;
+
+  background: #191D2D;
+box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+border-radius: 8px;
+
+}
+.avatar{
+  margin-left: 15px;
+  margin-top: 23px;
+}
+.dateAcc{
+  display: flex;
+}
+.dateAcc1{
+  display: flex;
+  margin-left: 60px;
+  margin-top: 30px;
+}
+.InfoPlayer{
+  height: 32px;
+  margin-top:17px;
+  margin-left: 5px;
+}
+.Info{
+  margin-top: 0px;
+  margin-bottom: 0;
+  font-weight: 500;
+font-size: 16px;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+.Info2{
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-weight: 500;
+  margin-left: 5px;
+font-size: 16px;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+.Info1{
+  margin-bottom: 0;
+  font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+text-transform: none;
+color: #575E78;
+}
+.chipimg{
+  margin-right: 11.5px;
+}
+.paralle{
+  margin-top: 23px;
+margin-left: 55px;
+  width: 38px;
+  height: 32px;
+  background: linear-gradient(82.02deg, #3187FF 2.99%, #7AB6FF 95.79%);
+  transform: skew(-20deg);
+border-radius: 2px;
+
+}
+.question{
+  transform: skew(15deg);
+padding-left: 7px;
+padding-top: 3px;
+}
+.allTRan{
+  display: flex;
+  height: 25px;
+  margin-top:30px;
+  margin-left: 30px;
+}
+.Transistor{
+  height: 18px;
+  margin-top: 2px;
+  margin-bottom: 0;
+  font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+
+color: #E48D37;
+}
