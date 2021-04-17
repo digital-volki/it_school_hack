@@ -4,7 +4,7 @@ import HeaderComponent from "../../components/HeaderComponent";
 import style from '../../styles/Battle.module.scss'
 import clsx from "clsx";
 import Timer from "../../components/Timer";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { PullQuestions } from "../../components/none/PullQuestions";
 import styles from "../../components/PlayerChallenge/plch.module.scss";
@@ -94,50 +94,51 @@ export default function Battle() {
                     </div>
                     <div
                         className={clsx('align-items-center bg-block-bg rounded m-1 p-4 justify-content-between', style.container)}>
-                        <div className={style.count}>
-                            Классификатор
-                        </div>
-                        <div className={'text-white'}>
-                            Дано целое число N. Определите, к какой категории оно относится:
-                            <br/>
-                            <br/>
-                            "DIGIT", если это однозначное неотрицательное целое число;<br/>
-                            "NUM", если это двузначное целое положительное число; <br/>
-                            "OTHER", если оно не относится к первым двум категориям. <br/>
-                        </div>
-                        <div className={style.count}>
-                            Входные данные
-                        </div>
-                        <div className={'text-white'}>
-                            Во входном потоке в единственной строке записано целое число N (−10≤N≤10)
-                        </div>
-                        <div className={style.count}>
-                            Пример
-                        </div>
-                        <div className={'text-white'}>
-                            <table className="table-block-bg table-bordered border-main-b table text-white">
-                                <thead className={'rounded'}>
-                                <tr>
-                                    <th scope="col">Входные данные</th>
-                                    <th scope="col">Выходные данные</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>6</td>
-                                    <td>ENUM</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>DIGIT</td>
-                                </tr>
-                                <tr>
-                                    <th>3</th>
-                                    <td>DIGIT</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        {/*<div className={style.count}>*/}
+                        {/*    Классификатор*/}
+                        {/*</div>*/}
+                        {/*<div className={'text-white'}>*/}
+                        {/*    Дано целое число N. Определите, к какой категории оно относится:*/}
+                        {/*    <br/>*/}
+                        {/*    <br/>*/}
+                        {/*    "DIGIT", если это однозначное неотрицательное целое число;<br/>*/}
+                        {/*    "NUM", если это двузначное целое положительное число; <br/>*/}
+                        {/*    "OTHER", если оно не относится к первым двум категориям. <br/>*/}
+                        {/*</div>*/}
+                        {/*<div className={style.count}>*/}
+                        {/*    Входные данные*/}
+                        {/*</div>*/}
+                        {/*<div className={'text-white'}>*/}
+                        {/*    Во входном потоке в единственной строке записано целое число N (−10≤N≤10)*/}
+                        {/*</div>*/}
+                        {/*<div className={style.count}>*/}
+                        {/*    Пример*/}
+                        {/*</div>*/}
+                        {/*<div className={'text-white'}>*/}
+                        {/*    <table className="table-block-bg table-bordered border-main-b table text-white">*/}
+                        {/*        <thead className={'rounded'}>*/}
+                        {/*        <tr>*/}
+                        {/*            <th scope="col">Входные данные</th>*/}
+                        {/*            <th scope="col">Выходные данные</th>*/}
+                        {/*        </tr>*/}
+                        {/*        </thead>*/}
+                        {/*        <tbody>*/}
+                        {/*        <tr>*/}
+                        {/*            <td>6</td>*/}
+                        {/*            <td>ENUM</td>*/}
+                        {/*        </tr>*/}
+                        {/*        <tr>*/}
+                        {/*            <td>5</td>*/}
+                        {/*            <td>DIGIT</td>*/}
+                        {/*        </tr>*/}
+                        {/*        <tr>*/}
+                        {/*            <th>3</th>*/}
+                        {/*            <td>DIGIT</td>*/}
+                        {/*        </tr>*/}
+                        {/*        </tbody>*/}
+                        {/*    </table>*/}
+                        {/*</div>*/}
+                        <div dangerouslySetInnerHTML={{__html: questions[num].question}} />
                         {questions[num]?.type !== 'code' ? (
                             <input className={'form-control bg-dark text-white'} {...register('answer')}/>
                         ) : (
