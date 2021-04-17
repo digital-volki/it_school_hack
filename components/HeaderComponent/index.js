@@ -10,10 +10,8 @@ export default function HeaderComponent ({children}){
       <div className={clsx(styles['fastStart'])}>
         <img alt='faststart' src={'/bx-category.svg'}/>
         <p className={clsx(styles['textFastStart'])}>Быстрые тесты</p>
-        <img alt='vector' src={'/vector.svg'} className={clsx(styles['vec'])}/>
         <img alt='faststart' src={'/logo.svg'} className={clsx(styles['comand'])}/>
         <p className={clsx(styles['textFastStart'])}>Команда</p>
-        <img alt='vector' src={'/vector.svg'} className={clsx(styles['vec'])}/>
       </div>
         <div className={clsx(styles['fastStart'])}>
           <div className={clsx(styles['parallelogram'])}>
