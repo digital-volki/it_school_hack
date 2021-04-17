@@ -1,12 +1,14 @@
 import styles from './plch.module.scss'
 import clsx from "clsx";
 import Link from 'next/link'
-import PlayerComponent from './player'
+import { PlayerComponent } from './player'
 import BatteleArena from '../BattleArena'
 import HistoryMatch from '../HistoryMatch'
-
+import {useState} from 'react';
 
 export default function playerChallenge ({children}){
+  const [type, setType] = useState(false);
+
   return(
     <>
     <div className={styles.all}>
@@ -17,7 +19,7 @@ export default function playerChallenge ({children}){
             <p>Вызовы игроков</p>
             <img alt="shit" src={'./bx-shield-quarter.svg'} />
           </div>
-            <PlayerComponent />
+            <PlayerComponent type={true}/>
           </div>
 
         </div>
@@ -29,7 +31,7 @@ export default function playerChallenge ({children}){
             <p>Вызовы игроков</p>
             <img alt="shit" src={'./bx-shield-quarter.svg'} />
           </div>
-            <PlayerComponent />
+            <PlayerComponent type={false}/>
           </div>
 
         </div>

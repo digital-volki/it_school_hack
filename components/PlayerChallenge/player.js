@@ -2,7 +2,7 @@ import styles from './plch.module.scss'
 import clsx from "clsx";
 import Link from 'next/link'
 
-export default function player (){
+export const PlayerComponent = ({type}) => {
   return(
     <>
       <div className={clsx(styles['playerComponent'])}>
@@ -19,9 +19,12 @@ export default function player (){
             <img alt='chip' src={'/bx-star.svg'} className={clsx(styles['chipimg'])}/>
 
           </div>
-          <div className={clsx(styles['paralle'])}>
-            <img alt='question' src={'/right.svg'}  className={clsx(styles['question'])}/>
-          </div>
+          {type ?
+            <div className={clsx(styles['paralle'])}>
+              <img alt='question' src={'/right.svg'}  className={clsx(styles['question'])}/>
+            </div> : <p className={clsx(styles['chet'])}>3:2</p>
+          }
+
         </div>
       </div>
     </>
