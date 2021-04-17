@@ -25,6 +25,7 @@ export default function HeaderComponent ({children}){
             </div>
           </div>
           <div className={clsx(styles['parallelogram'])}>
+          
             <p className={clsx(styles['textPara'])}>енергия</p>
             <div className={clsx(styles['chip'])}>
               <p className={clsx(styles['textNumber'])}>10/10</p>
