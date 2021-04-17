@@ -156,3 +156,27 @@ line-height: 19px;
 
 color: #E48D37;
 }
+.par{
+  width: 56px;
+  height: 32px;
+  background: #191D2D;
+  border-radius: 8px;
+  margin-top: 49px;
+  transform: skew(-20deg);
+
+}
+.parText{
+  display: block;
+  margin-left: 23px;
+  padding-top: 6px;
+
+  font-weight: 500;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+transform: skew(20deg);
+
+}
+.p{
+  background:#6FD04F;
+}

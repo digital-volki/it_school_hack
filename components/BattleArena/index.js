@@ -19,6 +19,9 @@ export default function BattleArena (){
             <button onClick={() => setType(1)} className={clsx(styles['button'], type === 1  && styles['buttonActive'])}  >Подписчики</button>
             <button onClick={() => setType(2)} className={clsx(styles['button'], type === 2 && styles['buttonActive'])}  >Подписка</button>
           <GamersComponent type={type}/>
+            <div className={clsx(styles['par'], type === 0 && styles['p'])}>
+              <p className={clsx(styles['parText'])}>{type}</p>
+            </div>
         </div>
       </div>
 
