@@ -23,6 +23,8 @@ class MyDocument extends Document {
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
                         integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
                         crossOrigin="anonymous"/>
+                <script src="https://unpkg.com/monaco-editor@0.12.0/min/vs/loader.js"/>
+                <script src={'/editor.js'}/>
                 </body>
             </Html>
         )
