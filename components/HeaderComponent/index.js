@@ -4,9 +4,7 @@ import Link from 'next/link'
 import {FastGame} from '../Pop-up/FastGame/'
 import {useState} from 'react'
 
-export default function HeaderComponent ({children}){
-
-  const [fastActive, setFastActive] = useState(false)
+export default function HeaderComponent ({children, chkPanel = false}){
 
   return(
     <>
