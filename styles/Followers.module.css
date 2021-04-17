@@ -1,0 +1,96 @@
+.drp_btn{
+    background: none;
+    color: #FFFFFF;
+    border: none;
+    font-weight: 700;
+}
+
+.space{
+    width: 6px;
+}
+
+.text_drp{
+    color: #636F89;
+    font-weight: 500;
+}
+
+.button{
+    width: 175px;
+    height: 62px;
+    margin: 0 auto;
+    background: #191D2D;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    outline: 0;
+    border: 0;
+    text-transform: uppercase;
+    color: #575E78;
+    z-index: 2;
+}
+
+.buttonActive{
+    width: 175px;
+    height: 62px;
+    margin: 0 auto;
+    background: linear-gradient(98.01deg, #89D542 0%, #87CE58 50.1%, #97EA51 101.26%);
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    outline: 0;
+    border: 0;
+    text-transform: uppercase;
+    color: #fff;
+    z-index: 2;
+}
+
+.panel_btns{
+    width: 952px;
+    height: 62px;
+    background: #191D2D;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form_friends{
+    width: 414px;
+    height: 732px;
+    background: #121420;
+    border-radius: 12px;
+    margin-bottom: -20px;
+    padding-bottom: -20px;
+    margin-left: 30px;
+}
+
+.top_panel{
+    width: 414px;
+    height: 88px;
+
+    background: #191D2D;
+    border-radius: 12px 12px 0 0;
+    margin-bottom: -15%;
+
+}
+
+.text_friends{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-left: 32px;
+    padding-top: 33px;
+    padding-bottom: -30px;
+    padding-right: 32px;
+    display: flex;
+
+}
+
+.add_friend{
+    margin-left: auto;
+}
+

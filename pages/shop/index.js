@@ -10,10 +10,11 @@ export default function Shop() {
     return (
         <div>
             <HeaderComponent/>
+            <SidePanel/>
             <div className={styles.sort}>
                 Сортировка по цене
             </div>
-            <div className="d-flex flex-wrap">
+            <div className="d-flex flex-wrap" style={{ marginLeft: '20%' }}>
                 <Card img ={"/MerchSweatshot.png"} name={'свитшот унисекс белый'} price={'15000'}/>
                 <Card img ={"/MerchSweatshot.png"} name={'свитшот унисекс белый'} price={'15000'}/>
                 <Card img ={"/MerchSweatshot.png"} name={'свитшот унисекс белый'} price={'15000'}/>
