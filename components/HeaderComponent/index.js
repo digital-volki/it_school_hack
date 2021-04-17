@@ -2,12 +2,11 @@ import styles from './header.module.scss'
 import clsx from "clsx";
 import Link from 'next/link'
 
-export default function HeaderComponent ({children}){
+export default function HeaderComponent ({children, chkPanel = false}){
   return(
     <>
-    <div className={clsx(styles['Header'])}>
-
-      <div className={clsx(styles['fastStart'])}>
+    <div className={clsx(styles['Header'])} style={{ justifyContent: chkPanel ? 'flex-end' : 'space-between'  }}>
+      <div className={clsx(styles['fastStart'], chkPanel && 'd-none')}>
         <img alt='faststart' src={'/bx-category.svg'}/>
         <p className={clsx(styles['textFastStart'])}>Быстрые тесты</p>
         <img alt='faststart' src={'/logo.svg'} className={clsx(styles['comand'])}/>
