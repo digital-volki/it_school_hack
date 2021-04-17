@@ -9,23 +9,22 @@ import { useForm } from "react-hook-form";
 import { PullQuestions } from "../../components/none/PullQuestions";
 import styles from "../../components/PlayerChallenge/plch.module.scss";
 import { Question } from "../../components/Question";
-import { useRouter } from "next/router";
+import { Chip, Star } from "../../components/icons";
 // import { PlayerComponent } from "../../components/PlayerChallenge/player";
 
 
 export default function Battle() {
 
     const [num, setNum] = useState(0);
+    const [isShowResult, setShowing] = useState(false)
     const [questions] = useState(PullQuestions());
     const [answers] = useState(new Map());
     const {handleSubmit, reset, register} = useForm();
 
-    const {push} = useRouter()
-
     return (
         <form onSubmit={handleSubmit((data) => {
             answers.set(num, data.answer)
-            setNum(s => s < questions.length - 1 ? s + 1 : s)
+            setNum(s => s + 1)
             reset()
         })}>
             <HeaderComponent/>
@@ -94,50 +93,6 @@ export default function Battle() {
                     </div>
                     <div
                         className={clsx('align-items-center bg-block-bg rounded m-1 p-4 justify-content-between', style.container)}>
-                        {/*<div className={style.count}>*/}
-                        {/*    Классификатор*/}
-                        {/*</div>*/}
-                        {/*<div className={'text-white'}>*/}
-                        {/*    Дано целое число N. Определите, к какой категории оно относится:*/}
-                        {/*    <br/>*/}
-                        {/*    <br/>*/}
-                        {/*    "DIGIT", если это однозначное неотрицательное целое число;<br/>*/}
-                        {/*    "NUM", если это двузначное целое положительное число; <br/>*/}
-                        {/*    "OTHER", если оно не относится к первым двум категориям. <br/>*/}
-                        {/*</div>*/}
-                        {/*<div className={style.count}>*/}
-                        {/*    Входные данные*/}
-                        {/*</div>*/}
-                        {/*<div className={'text-white'}>*/}
-                        {/*    Во входном потоке в единственной строке записано целое число N (−10≤N≤10)*/}
-                        {/*</div>*/}
-                        {/*<div className={style.count}>*/}
-                        {/*    Пример*/}
-                        {/*</div>*/}
-                        {/*<div className={'text-white'}>*/}
-                        {/*    <table className="table-block-bg table-bordered border-main-b table text-white">*/}
-                        {/*        <thead className={'rounded'}>*/}
-                        {/*        <tr>*/}
-                        {/*            <th scope="col">Входные данные</th>*/}
-                        {/*            <th scope="col">Выходные данные</th>*/}
-                        {/*        </tr>*/}
-                        {/*        </thead>*/}
-                        {/*        <tbody>*/}
-                        {/*        <tr>*/}
-                        {/*            <td>6</td>*/}
-                        {/*            <td>ENUM</td>*/}
-                        {/*        </tr>*/}
-                        {/*        <tr>*/}
-                        {/*            <td>5</td>*/}
-                        {/*            <td>DIGIT</td>*/}
-                        {/*        </tr>*/}
-                        {/*        <tr>*/}
-                        {/*            <th>3</th>*/}
-                        {/*            <td>DIGIT</td>*/}
-                        {/*        </tr>*/}
-                        {/*        </tbody>*/}
-                        {/*    </table>*/}
-                        {/*</div>*/}
                         <div dangerouslySetInnerHTML={{__html: questions[num].question}} className={'mb-3'}/>
                         {questions[num]?.type !== 'code' ? (
                             <input className={'form-control bg-dark text-white'} {...register('answer')}/>
@@ -147,18 +102,118 @@ export default function Battle() {
                             }}/>
                         )}
                         <div className={'d-flex mt-2'}>
-                            <button className={'btn btn-success'} type={'submit'}>
+                            <button className={clsx('btn btn-success', num > questions.length - 2 && 'd-none')}
+                                    type={'submit'}>
                                 к следующему шагу
                             </button>
-                            <button onClick={() => push('/')}
-                                className={'btn btn-outline-success'} type={'button'}>
+                            <button onClick={() => setShowing(true)}
+                                    className={clsx('btn btn-outline-success', isShowResult && 'd-none')}
+                                    type={'button'}>
                                 Закончить
                             </button>
                         </div>
                     </div>
                 </div>
                 <div className={'col-4'}>
-                    <Timer/>
+                    {!(num < questions.length - 1) ? <Timer/> : (
+                        <div className={'d-flex flex-column align-self-start justify-content-center'}>
+                            <div className={clsx(styles['playerChallenge_b'])}>
+                                <div className={clsx(styles['playerChallengeHeader'])}>
+                                    <div className={clsx(styles['playerText'])}>
+                                        <p>
+                                            Статистика
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <Question
+                                            q={'Время'}
+                                            r={'14:32'}
+                                        />
+                                    </div>
+                                    <div>
+                                        <Question
+                                            q={'Правильных ответов'}
+                                            r={'4'}
+                                        />
+                                    </div>
+                                    <div>
+                                        <Question
+                                            q={'Неправильных ответов'}
+                                            r={'3'}
+                                        />
+                                    </div>
+                                    <div>
+                                        <Question
+                                            q={'Награда'}
+                                            r={
+                                                <div className={'d-flex'}>
+                                                    <div>
+                                                        300
+                                                    </div>
+                                                    <div>
+                                                        <Chip/>
+                                                    </div>
+                                                    <div>
+                                                        250
+                                                    </div>
+                                                    <div>
+                                                        <Star/>
+                                                    </div>
+                                                </div>
+                                            }
+                                        />
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div className={clsx(styles['playerChallenge_b'])}>
+                                <div className={clsx(styles['playerChallengeHeader'])}>
+                                    <div className={clsx(styles['playerText'])}>
+                                        <p>
+                                            Рекомендации
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <Question
+                                            q={'Типы данных и операции'}
+                                        />
+                                    </div>
+                                    <div>
+                                        <Question
+                                            q={'Представление отрицательн...'}
+                                        />
+                                    </div>
+                                    <div>
+                                        <Question
+                                            q={'Циклы while, do while'}
+                                        />
+                                    </div>
+                                    <div>
+                                        <Question
+                                            q={'Награда'}
+                                            r={
+                                                <div className={'d-flex'}>
+                                                    <div>
+                                                        300
+                                                    </div>
+                                                    <div>
+                                                        <Chip/>
+                                                    </div>
+                                                    <div>
+                                                        250
+                                                    </div>
+                                                    <div>
+                                                        <Star/>
+                                                    </div>
+                                                </div>
+                                            }
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
         </form>
