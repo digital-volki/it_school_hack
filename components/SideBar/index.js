@@ -42,9 +42,9 @@ export default function SidePanel ({children}){
             </div>
           </a>
         </Link>
-        <Link href='/'>
+        <Link href='/followers'>
           <a>
-             <div className={clsx(styles['par'], pathname === '/4' && styles['p'])}>
+             <div className={clsx(styles['par'], pathname === '/followers' && styles['p'])}>
               <img alt='game' src={'./bx-group.svg'} className={clsx(styles['barImag'])}/>
              </div>
           </a>
