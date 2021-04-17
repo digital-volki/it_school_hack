@@ -4,13 +4,39 @@ import HeaderComponent from "../../components/HeaderComponent";
 import style from '../../styles/Battle.module.scss'
 import clsx from "clsx";
 import Timer from "../../components/Timer";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { PullQuestions } from "../../components/none/PullQuestions";
+import styles from "../../components/PlayerChallenge/plch.module.scss";
+import { PlayerComponent } from "../../components/PlayerChallenge/player";
 
 
 export default function Battle() {
+
+    const [num, setNum] = useState(0);
+    const [questions] = useState(PullQuestions());
+    const [answers, setAnswers] = useState(new Map());
+    const {handleSubmit, reset, register} = useForm();
+
     return (
-        <div>
+        <form onSubmit={handleSubmit((data) => {
+            answers.set(num, data.answer)
+            reset()
+        })}>
             <HeaderComponent/>
             <div className={'d-flex bg-l-bg mx-5 rounded row '}>
+                <div className={clsx(styles['playerChallenge'])}>
+                    <div className={clsx(styles['playerChallengeHeader'])}>
+                        <div className={clsx(styles['playerText'])}>
+                            <p>Быстрые тесты</p>
+                            <div>
+                                {Math.round((answers.size+1) / questions.length * 100)} %
+                            </div>
+                        </div>
+                        <PlayerComponent type={true}/>
+                    </div>
+
+                </div>
                 <div className={'main col-4'}>
                     <div
                         className={clsx('align-items-center d-flex bg-block-bg rounded m-1 p-4 justify-content-between', style.container)}>
@@ -98,13 +124,22 @@ export default function Battle() {
                                 </tbody>
                             </table>
                         </div>
-                        <div id={'code_r'} style={{
-                            height: '500px'
-                        }}/>
+                        {questions[num]?.type !== 'code' ? (
+                            <input className={'form-control bg-dark text-white'} {...register('answer')}/>
+                        ) : (
+                            <div id={'code_r'} style={{
+                                height: '500px'
+                            }}/>
+                        )}
+                        <div className={'d-flex mt-2'}>
+                            <button className={'btn btn-outline-success'} type={'submit'}>
+                                к следующему шагу
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <Timer />
             </div>
-        </div>
+        </form>
     )
 }
