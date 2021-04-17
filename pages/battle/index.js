@@ -138,7 +138,7 @@ export default function Battle() {
                         {/*        </tbody>*/}
                         {/*    </table>*/}
                         {/*</div>*/}
-                        <div dangerouslySetInnerHTML={{__html: questions[num].question}} />
+                        <div dangerouslySetInnerHTML={{__html: questions[num].question}} className={'mb-3'}/>
                         {questions[num]?.type !== 'code' ? (
                             <input className={'form-control bg-dark text-white'} {...register('answer')}/>
                         ) : (
