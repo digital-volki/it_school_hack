@@ -6,9 +6,8 @@ import {leagues} from "../../lib/consts";
 export const GamersComponent = ({username, league, balance, experience, i}) => {
     return (
         <>
-            <div className={clsx(styles['playerComponent'])}>
+            <div className={clsx(styles['playerComponent'])} data-bs-toggle="modal" data-bs-target="#startModal" >
                 <div className={clsx(styles['dateAcc'])}>
-
                     <div style={{
                         backgroundImage: `url("https://www.thiswaifudoesnotexist.net/example-${i}.jpg")`,
                         width: '36px',
