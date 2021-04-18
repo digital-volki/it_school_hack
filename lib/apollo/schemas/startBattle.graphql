@@ -1,0 +1,19 @@
+mutation startBattle ($id: ID!, $bid: ID!) {
+    startBattle(userId: $id, battleId: $bid) {
+        value {
+            caller {
+                username
+            }
+            receiver {
+                username
+            }
+            task {
+                questions {
+                    id
+                    description
+                }
+                taskId
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+mutation checkAnswers ($id: ID!, $bid: ID!, $qa: [KeyValuePairOfGuidAndStringInput!]) {
+    checkAnswers(battleId: $bid, userId: $id, questionsAnswers: $qa){
+        value{
+            results {
+                questionId
+                battleId
+                res
+                userId
+            }
+        }
+    }
+}
