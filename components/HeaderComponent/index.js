@@ -5,17 +5,24 @@ import {FastGame} from '../Pop-up/FastGame/'
 import {useState} from 'react'
 
 
-export default function HeaderComponent ({children, chkPanel = false}){
-  const [fastActive, setFastActive] = useState(false);
+
+export default function HeaderComponent ({children, chkPanel = false, panel, title}){
+
+  const[fastActive, setFastActive] = useState(false);
+
   return(
     <>
+
     <div className={clsx(styles['Header'])} style={{ justifyContent: chkPanel ? 'flex-end' : 'space-between'  }}>
-      <div className={clsx(styles['fastStart'], chkPanel && 'd-none')}>
-        <img alt='faststart' src={'/bx-category.svg'}/>
-        <p className={clsx(styles['textFastStart'])} onClick={()=> setFastActive(true)}>Быстрые тесты</p>
-        <img alt='faststart' src={'/logo.svg'} className={clsx(styles['comand'])}/>
-        <p className={clsx(styles['textFastStart'])}>Команда</p>
-      </div>
+      {panel ?
+        <div className={clsx(styles['fastStart'], chkPanel && 'd-none')}>
+          <img alt='faststart' src={'/bx-category.svg'}/>
+          <p className={clsx(styles['textFastStart'])} onClick={()=> setFastActive(true)}>Быстрые тесты</p>
+          <img alt='faststart' src={'/logo.svg'} className={clsx(styles['comand'])}/>
+          <p className={clsx(styles['textFastStart'])}>Команда</p>
+        </div> : <div className={styles.trapezoid}><p className={styles.text}>{title}</p></div>
+      }
+
       <FastGame active={fastActive} setActive={setFastActive}/>
         <div className={clsx(styles['fastStart'])}>
           <div className={clsx(styles['parallelogram'])}>

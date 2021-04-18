@@ -2,6 +2,7 @@
 import HeaderComponent from '../components/HeaderComponent/'
 import SideBar from '../components/SideBar/'
 import PlayerChallenge from '../components/PlayerChallenge/'
+
 import {StartModal} from "../components/StartModal";
 
 
@@ -13,6 +14,7 @@ export default function Home() {
                 <HeaderComponent/>
                 <PlayerChallenge/>
             </SideBar>
+
 
         </div>
     )
