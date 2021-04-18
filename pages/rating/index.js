@@ -24,10 +24,12 @@ import {
 import {useState} from "react";
 
 export default function Rating() {
+  const [panel, setPanel] = useState(true)
+
     const [type, setType] = useState(0);
     return (
         <div>
-            <HeaderComponent chkPanel={true}/>
+            <HeaderComponent chkPanel={true} panel={true}/>
 
             <SidePanel/>
             <div className={styles.label}> <Label3/> </div>

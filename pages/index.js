@@ -4,15 +4,17 @@ import SideBar from '../components/SideBar/'
 import PlayerChallenge from '../components/PlayerChallenge/'
 
 import {StartModal} from "../components/StartModal";
-
+import {useState} from 'react'
 
 export default function Home() {
+  const [panel, setPanel] = useState(true)
+
     return (
         <div>
             <StartModal />
             <SideBar>
-                <HeaderComponent/>
-                <PlayerChallenge/>
+                <HeaderComponent panel={true}/>
+                <PlayerChallenge panel={panel}/>
             </SideBar>
 
 

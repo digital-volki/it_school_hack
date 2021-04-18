@@ -4,15 +4,17 @@ import styles from '../../styles/Shop.module.css'
 import clsx from "clsx";
 import {Drop, LabelShop} from "../../components/icons";
 import HeaderComponent from "../../components/HeaderComponent";
-
+import {useState} from 'react'
 export default function Shop() {
+  const [panel, setPanel] = useState(true)
+
     function Alrt() {
         alert("Скоро новая партия, не пропусти! :)");
     }
 
     return (
         <div>
-            <HeaderComponent chkPanel={true}/>
+            <HeaderComponent chkPanel={true} panel={true}/>
             <SidePanel/>
            <div className={styles.label}> <LabelShop/> </div>
             <div className={styles.panel_main}>
