@@ -36,11 +36,6 @@ export const GamersComponent = ({username, league, balance, experience, i}) => {
                     </Link>
                 </div>
           </div>
-          <Link href='/battle'>
-          <a>
-            <div className={clsx(styles['paralle'])}>
-              <img alt='question' src={'/right.svg'}  className={clsx(styles['question'])}/>
-            </div>
         </>
     )
 }
