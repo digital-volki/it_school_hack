@@ -5,11 +5,13 @@
     padding-top: 33px;
     display: flex;
     white-space: nowrap;
+
 }
 
 .label{
     position: absolute;
     margin-left: 12.15%;
+
 }
 
 .panel_main{
@@ -20,6 +22,7 @@
     padding-left: 38px;
     border-radius: 12px;
     margin-top: 2%;
+    margin-bottom: 40px;
 }
 
 .drp_btn{
