@@ -116,16 +116,17 @@ export default function Battle() {
             {/*</svg>*/}
 
 
-            <Row/>
-            <Row/>
-            <Row/>
-            <Row/>
-            <Row/>
-            <Row/>
-            <Row/>
-            <Row/>
-            <Row/>
-            <Row bg/>
+                <Row img={"/av9.png"} name = {'Роман Коробкин'} role = {'Транзистор'} chips = {'13567'} stars = {'3999'}/>
+                <Row img={"/av5.png"} name = {'Дамир Коровьев'} role = {'Транзистор'} chips = {'12754'} stars = {'3786'}/>
+                <Row img={"/av6.png"} name = {'Антон Столыпин'} role = {'Транзистор'} chips = {'12346'} stars = {'3567'}/>
+                <Row img={"/av7.png"} name = {'Вадим Алексеев'} role = {'Транзистор'} chips = {'11976'} stars = {'3566'}/>
+                <Row img={"/av1.png"} name = {'Алиса Шевелева'} role = {'Транзистор'} chips = {'12632'} stars = {'3200'}/>
+                <Row img={"/av8.png"} name = {'Артур Коробкин'} role = {'Транзистор'} chips = {'10978'} stars = {'3103'}/>
+                <Row img={"/av2.png"} name = {'Мария Цветаева'} role = {'Транзистор'} chips = {'9235'} stars = {'2726'}/>
+                <Row img={"/av3.png"} name = {'Диана Коробкин'} role = {'Транзистор'} chips = {'10245'} stars = {'2654'}/>
+                <Row img={"/av10.png"} name = {'Артём Тимофеев'} role = {'Транзистор'} chips = {'8432'} stars = {'2621'}/>
+
+                <Row img={"/av4.png"} name = {'Света Кулагина'} role = {'Транзистор'} chips = {'199'} stars = {'381'} bg/>
                 <Transition/>
             </div>
 
