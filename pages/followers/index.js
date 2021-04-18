@@ -1,11 +1,12 @@
 // import Timer from "../../components/Timer";
 import HeaderComponent from "../../components/HeaderComponent";
+import Transition from "../../components/transition/trans";
 import Row from "../../components/Row";
 import SidePanel from "../../components/SideBar";
 import { PlayerComponent } from "../../components/PlayerChallenge/player";
 import styles from "../../styles/Followers.module.css"
 import clsx from "clsx";
-import {AddFriend, Drop, Search} from "../../components/icons";
+import { AddFriend, Drop, Label2, Search} from "../../components/icons";
 // import BattleArena from "../../components/BattleArena";
 import {useState} from "react";
 
@@ -14,10 +15,13 @@ export default function Battle() {
     const [type, setType] = useState(0);
     return (
         <div>
-            <HeaderComponent/>
-<SidePanel/>
-        <div style={{ display: 'flex', marginLeft: '13%', marginTop: '5%' }}>
-            <div>
+            <HeaderComponent chkPanel={true}/>
+
+            <SidePanel/>
+            <div className={styles.label}> <Label2/> </div>
+
+            <div style={{ display: 'flex', marginLeft: '13%', marginTop: '5%'}}>
+            <div className={styles.panel_main}>
             <div style={{display: 'flex'}}>
                 <div className="dropdown" style={{marginLeft: 'auto'}}>
                     <button className={clsx(styles['btn text-white'], styles.drp_btn)} type="button"
@@ -122,6 +126,7 @@ export default function Battle() {
             <Row/>
             <Row/>
             <Row bg/>
+                <Transition/>
             </div>
 
             <div className={styles.form_friends}>
@@ -140,6 +145,7 @@ export default function Battle() {
                     <PlayerComponent/>
                     <PlayerComponent/>
                     <PlayerComponent/>
+
                 </div>
 
 
