@@ -1,0 +1,184 @@
+.fastGame{
+  width: 1920px;
+  height: 1080px;
+  background-color: rgba(0,0,0,0.4);
+  position: fixed;
+  z-index: 15;
+  top:0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+}
+.fastactive{
+  width: 1920px;
+  height: 1080px;
+  background-color: rgba(0,0,0,0.4);
+  position: fixed;
+  z-index: 15;
+  top:-20px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(1);
+}
+.fastGameContent{
+    width: 702px;
+  height: 846px;
+  background: linear-gradient(0deg, #252A3C, #252A3C), #C4C4C4;
+box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+border-radius: 12px;
+}
+.all{
+  position: absolute;
+  background: #191D2D;
+  width: 702px;
+  height: 84px;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+
+text-transform: uppercase;
+color: #FFFFFF;
+}
+.playerText{
+  position: relative;
+  top:32px;
+  width: 632px;
+  height: 26px;
+  margin-left: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+.playerImg{
+  cursor: pointer;
+}
+
+.allButton{
+  width:642px;
+  margin: auto;
+}
+.button{
+  width: 321px;
+  height: 62px;
+  margin: 0 auto;
+  background: #191D2D;
+border-radius: 12px;
+font-weight: bold;
+font-size: 18px;
+line-height: 25px;
+outline: 0;
+border: 0;
+text-transform: uppercase;
+color: #575E78;
+z-index: 2;
+}
+.buttonActive{
+  width: 321px;
+  height: 62px;
+  margin: 0 auto;
+  margin-top: 116px;
+background: linear-gradient(98.01deg, #89D542 0%, #87CE58 50.1%, #97EA51 101.26%);
+border-radius: 12px;
+font-weight: bold;
+font-size: 18px;
+line-height: 25px;
+outline: 0;
+border: 0;
+text-transform: uppercase;
+color: #fff;
+z-index: 2;
+}
+.button1{
+  width: 251px;
+  height: 52px;
+  margin-left: 196px;
+  margin-top: 20px;
+background: linear-gradient(98.01deg, #89D542 0%, #87CE58 50.1%, #97EA51 101.26%);
+border-radius: 12px;
+font-weight: bold;
+font-size: 18px;
+line-height: 25px;
+outline: 0;
+border: 0;
+text-transform: uppercase;
+color: #fff;
+z-index: 2;
+}
+.fastGame1{
+  width: 642px;
+  height:294px;
+  margin-left: auto;
+margin-right: auto;
+margin-top: 24px;
+background: #121420;
+border-radius: 12px;
+}
+.fastGame1Header{
+  display: flex;
+  justify-content: space-between;
+  width: 593px;
+  padding-top: 28px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.dateAcc1{
+  display: flex;
+}
+.Info{
+  margin-top: 0px;
+  margin-bottom: 0;
+  font-weight: 500;
+font-size: 16px;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+.fastStart{
+  display: flex;
+
+}
+.chipimg{
+  height: 20px;
+}
+.textFastStart{
+  padding-left: 11.5px;
+  font-size: 18px;
+  margin-bottom: 0;
+  white-space: nowrap;
+color:#FFFFFF;
+}
+.description{
+  display: grid;
+  grid-gap: 10px;
+  margin-top: 24px;
+    grid-template-columns: 1fr 1fr;
+  width: 594px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.description1{
+  width: 291px;
+  height: 57px;
+  background-color: #252A3C;
+  border-radius: 8px;
+  font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+text-transform: uppercase;
+color: #FFFFFF;
+display: flex;
+justify-content: space-between;
+
+}
+.Time{
+  margin-left: 15px;
+  margin-top: 20px;
+}
+.TimeNum{
+  margin-right: 15px;
+  margin-top: 20px;
+}

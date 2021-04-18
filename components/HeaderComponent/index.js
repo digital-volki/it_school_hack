@@ -1,17 +1,22 @@
 import styles from './header.module.scss'
 import clsx from "clsx";
 import Link from 'next/link'
+import {FastGame} from '../Pop-up/FastGame/'
+import {useState} from 'react'
+
 
 export default function HeaderComponent ({children, chkPanel = false}){
+  const [fastActive, setFastActive] = useState(false);
   return(
     <>
     <div className={clsx(styles['Header'])} style={{ justifyContent: chkPanel ? 'flex-end' : 'space-between'  }}>
       <div className={clsx(styles['fastStart'], chkPanel && 'd-none')}>
         <img alt='faststart' src={'/bx-category.svg'}/>
-        <p className={clsx(styles['textFastStart'])}>Быстрые тесты</p>
+        <p className={clsx(styles['textFastStart'])} onClick={()=> setFastActive(true)}>Быстрые тесты</p>
         <img alt='faststart' src={'/logo.svg'} className={clsx(styles['comand'])}/>
         <p className={clsx(styles['textFastStart'])}>Команда</p>
       </div>
+      <FastGame active={fastActive} setActive={setFastActive}/>
         <div className={clsx(styles['fastStart'])}>
           <div className={clsx(styles['parallelogram'])}>
             <p className={clsx(styles['textPara'])}>баланс</p>
@@ -24,7 +29,7 @@ export default function HeaderComponent ({children, chkPanel = false}){
             </div>
           </div>
           <div className={clsx(styles['parallelogram'])}>
-          
+
             <p className={clsx(styles['textPara'])}>енергия</p>
             <div className={clsx(styles['chip'])}>
               <p className={clsx(styles['textNumber'])}>10/10</p>

@@ -22,7 +22,7 @@ export const PlayerComponent = ({type, id , caller, receiver, key}) => {
           {type ?
             <div className={clsx(styles['paralle'])}>
               <img alt='question' src={'/right.svg'}  className={clsx(styles['question'])}/>
-            </div> : <p className={clsx(styles['chet'])}>3:2</p>
+            </div> : <p className={clsx(styles['chet'])}>3:0</p>
           }
 
         </div>

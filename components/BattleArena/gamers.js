@@ -26,7 +26,6 @@ export const GamersComponent = ({username, league, balance, experience, i}) => {
                         <img alt='chip' src={'/bx-chip.svg'} className={clsx(styles['chipimg'])}/>
                         <p className={clsx(styles['Info'])}>{experience}</p>
                         <img alt='chip' src={'/bx-star.svg'} className={clsx(styles['chipimg'])}/>
-
                     </div>
                     <Link href='/'>
                         <a>
@@ -36,6 +35,11 @@ export const GamersComponent = ({username, league, balance, experience, i}) => {
                         </a>
                     </Link>
                 </div>
+          </div>
+          <Link href='/battle'>
+          <a>
+            <div className={clsx(styles['paralle'])}>
+              <img alt='question' src={'/right.svg'}  className={clsx(styles['question'])}/>
             </div>
         </>
     )
