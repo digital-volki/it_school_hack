@@ -2,20 +2,20 @@ import styles from './plch.module.scss'
 import clsx from "clsx";
 import Link from 'next/link'
 
-export const PlayerComponent = ({type}) => {
+export const PlayerComponent = ({type, id , caller, receiver, key}) => {
   return(
-    <Link href={'/battle'}>
+    <Link href={`/battle/${id}`}>
       <div className={clsx(styles['playerComponent'])}>
         <div className={clsx(styles['dateAcc'])}>
-          <img alt='vladphoto' src={'./vlad.png'} className={clsx(styles['avatar'])}/>
+          <img alt='vladphoto' src={`https://www.thiswaifudoesnotexist.net/example-${key}.jpg`} className={clsx(styles['avatar'])}/>
           <div className={clsx(styles['InfoPlayer'])}>
-            <p className={clsx(styles['Info'])}>влад ш.</p>
+            <p className={clsx(styles['Info'])}>{caller?.username || receiver?.username}</p>
             <p className={clsx(styles['Info1'])}>2 дня</p>
           </div>
           <div className={clsx(styles['dateAcc1'])}>
-            <p className={clsx(styles['Info'])}>300</p>
+            <p className={clsx(styles['Info'])}>{caller?.balance || receiver?.balance}</p>
             <img alt='chip' src={'/bx-chip.svg'} className={clsx(styles['chipimg'])}/>
-            <p className={clsx(styles['Info'])}>300</p>
+            <p className={clsx(styles['Info'])}>{caller?.experience || receiver?.experience}</p>
             <img alt='chip' src={'/bx-star.svg'} className={clsx(styles['chipimg'])}/>
 
           </div>

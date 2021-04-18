@@ -2,8 +2,26 @@ import styles from './hismatch.module.scss'
 import clsx from "clsx";
 import ResultMatch from "./result"
 import TransComponent from '../transition/trans'
+import {useUserCtx} from "../UserMiddleware";
+import {useLazyQuery} from "@apollo/client";
+import GET_HISTORY_BATTLES from "../../lib/apollo/schemas/getResponsesBattles.graphql";
+import {useEffect} from "react";
 
 export default function hismatch (){
+  const {ctx: {id}} = useUserCtx()
+
+  const [loadReq, {called, loading, data}] = useLazyQuery(GET_HISTORY_BATTLES);
+
+  useEffect(() => {
+    if (id) {
+      loadReq({
+        variables: {
+          id
+        }
+      })
+    }
+  }, [id])
+
   return(
     <>
       <div className={styles.history}>
@@ -21,7 +39,9 @@ export default function hismatch (){
             <p>Время</p>
           </div>
           <div className={styles.titileandbutton}>
-            <ResultMatch/>
+
+              {(called && !loading) && (data.battles.nodes.map((o) => <ResultMatch {...o} />))}
+
             <TransComponent/>
         </div>
       </div>

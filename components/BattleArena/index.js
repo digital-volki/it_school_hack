@@ -44,7 +44,7 @@ export default function BattleArena() {
                             className={clsx(styles['button'], type === 2 && styles['buttonActive'])}>Подписка
                     </button>
                     {loading || data?.allUsers.nodes.map((o, index)=> (
-                        <GamersComponent type={type} {...o} key={String(index)}/>
+                        <GamersComponent type={type} {...o} key={String(index)} i={index} />
                     ))}
 
                     <TransComponent/>

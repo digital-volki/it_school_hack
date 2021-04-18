@@ -30,7 +30,10 @@ const UserMiddleware = ({children}) => {
     useEffect(() => {
         try {
             if (called && !loading) {
-                setCtx(s => s.id = data?.generateUser?.value.id)
+                setCtx(s => {
+                    s.id = data?.generateUser?.value.id
+                    return {...s}
+                })
                 fp.keys(data?.generateUser?.value).map((key) =>
                     window.localStorage.setItem(key, data?.generateUser?.value[key])
                 )
