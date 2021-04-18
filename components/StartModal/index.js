@@ -2,16 +2,17 @@ import {useMutation} from "@apollo/client";
 import CREATE_BATTLE from '../../lib/apollo/schemas/createBattle.graphql'
 import {useRouter} from "next/router";
 import {useUserCtx} from "../UserMiddleware";
+import {useEffect} from "react";
 
-export const StartModal = ({oid = "VXNlcgpnNDZjMTY5MzQ5ZTkxNGZkYjg5ZTU4YmEyYTI4Yjk1M2Q="}) => {
+export const StartModal = ({oid = "VXNlcgpnMGJlZGZiMDAyMmFhNDYwZmJiNTMzMzg1Y2JlMDc5MWU="}) => {
+
+    // const [] = useMutation()
 
     const {push} = useRouter()
     const {ctx: {id}} = useUserCtx()
     const [create, {data, loading}] = useMutation(CREATE_BATTLE)
 
-    const pr = async () => {
-        await push(`/battle/${data?.callBattle?.value?.id}`)
-    }
+    useEffect(() => typeof data !== 'undefined' && push(`/battle/${data?.callBattle?.value?.id}`).then(() => {}), [data])
 
     return (
         <div className="modal fade" id="startModal" tabIndex="-1" aria-labelledby="startModalLabel" aria-hidden="true">
@@ -36,8 +37,7 @@ export const StartModal = ({oid = "VXNlcgpnNDZjMTY5MzQ5ZTkxNGZkYjg5ZTU4YmEyYTI4Y
                                 variables: {
                                     id,
                                     oid
-                                },
-                                onCompleted: pr(),
+                                }
                             })
                         }}>
                             Продолжить

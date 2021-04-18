@@ -3,5 +3,8 @@ mutation createBattle ($id: ID!, $oid: ID!){
         value {
             id
         }
+        errors {
+            message
+        }
     }
 }
