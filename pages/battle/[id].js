@@ -4,28 +4,82 @@ import HeaderComponent from "../../components/HeaderComponent";
 import style from '../../styles/Battle.module.scss'
 import clsx from "clsx";
 import Timer from "../../components/Timer";
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { useForm } from "react-hook-form";
-import { PullQuestions } from "../../components/none/PullQuestions";
+
 import styles from "../../components/PlayerChallenge/plch.module.scss";
 import { Question } from "../../components/Question";
 import { Chip, Star } from "../../components/icons";
+import START_BATTLE from '../../lib/apollo/schemas/startBattle.graphql'
+import CHECK_ANSWER from '../../lib/apollo/schemas/checkAnswers.graphql'
+import {useMutation} from "@apollo/client";
+import {useRouter} from "next/router";
+import {useUserCtx} from "../../components/UserMiddleware";
+
 // import { PlayerComponent } from "../../components/PlayerChallenge/player";
 
 
 export default function Battle() {
 
+    const {query} = useRouter()
+    const { id: bid } = query
+
+
+
+    const [start, {data, loading, called}] = useMutation(START_BATTLE)
+    const [check] = useMutation(CHECK_ANSWER)
+
+    const {ctx} = useUserCtx()
+
+    useEffect(async () => {
+        (bid && ctx.id) && await start({
+            variables: {
+                id: ctx?.id,
+                bid
+            }
+        })
+    }, [ctx.id, bid])
+
     const [num, setNum] = useState(0);
     const [isShowResult, setShowing] = useState(false)
-    const [questions] = useState(PullQuestions());
+    const [questions, setQue] = useState([]);
     const [answers] = useState(new Map());
+
+    useEffect(() => {
+        if (called && !loading)
+            setQue(data.startBattle.value.task.questions)
+    }, [called, loading])
+
     const {handleSubmit, reset, register} = useForm();
 
+    if (!called || loading) {
+        return (
+            <>
+                <div className="spinner-border text-light text-center" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </div>
+            </>
+        )
+    }
+
     return (
-        <form onSubmit={handleSubmit((data) => {
+        <form onSubmit={handleSubmit(async (data) => {
             answers.set(num, data.answer)
             setNum(s => s + 1)
             reset()
+            if (questions.length - 1 < answers.size) {
+                const d = []
+                answers.forEach((v, k) => d.push({ key: questions[k].id, value: v}))
+
+                console.log(answers.entries())
+                await check({
+                    variables: {
+                        qa: [...d],
+                        bid,
+                        id: ctx?.id
+                    }
+                })
+            }
         })}>
             <HeaderComponent/>
             <div className={'d-flex bg-l-bg mx-5 rounded row '}>
@@ -40,9 +94,9 @@ export default function Battle() {
                         {questions.map((o, index) => (
                             <div onClick={() => setNum(index)}>
                                 <Question
-                                    num={index}
+                                    num={index+1}
                                     now={index === num}
-                                    pass={answers.get(index) === o.answer}
+                                    pass={true}
                                     answer={answers.get(index)}
                                 />
                             </div>
@@ -92,8 +146,9 @@ export default function Battle() {
                         </div>
                     </div>
                     <div
-                        className={clsx('align-items-center bg-block-bg rounded m-1 p-4 justify-content-between', style.container)}>
-                        <div dangerouslySetInnerHTML={{__html: questions[num].question}} className={'mb-3'}/>
+                        className={clsx('text-white align-items-center bg-block-bg rounded m-1 p-4 justify-content-between', style.container)}>
+                        {/*{JSON.stringify(questions)}*/}
+                        {questions[num]?.description}
                         {questions[num]?.type !== 'code' ? (
                             <input className={'form-control bg-dark text-white'} {...register('answer')}/>
                         ) : (

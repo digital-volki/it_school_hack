@@ -7,16 +7,22 @@
 
 .label{
     position: absolute;
-    margin-left: 13.15%;
+    margin-left: 13.13%;
+}
+
+.text_stars{
+    color: #FFFFFF;
+    margin-top: 2%;
+    margin-right: 2.5%;
 }
 
 .panel_main{
-    width: 1582px;
+    width: 1120px;
     height: 1222px;
     background-color: #121420;
     padding-left: 38px;
     padding-top: 38px;
-    padding-right: 7%;
+    padding-right: 60px;
     border-radius: 12px;
     margin-bottom: 40px;
 }
@@ -51,7 +57,7 @@
     width: 175px;
     height: 62px;
     margin: 0 auto;
-    background: linear-gradient(98.01deg, #89D542 0%, #87CE58 50.1%, #97EA51 101.26%);
+    background: #E48D37;
     border-radius: 12px;
     font-weight: bold;
     font-size: 18px;

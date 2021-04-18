@@ -1,11 +1,12 @@
 // import Timer from "../../components/Timer";
 import HeaderComponent from "../../components/HeaderComponent";
+import Transition from "../../components/transition/trans";
 import Row from "../../components/Row";
 import SidePanel from "../../components/SideBar";
 import { PlayerComponent } from "../../components/PlayerChallenge/player";
 import styles from "../../styles/Followers.module.css"
 import clsx from "clsx";
-import {AddFriend, Drop, Search} from "../../components/icons";
+import { AddFriend, Drop, Label2, Search} from "../../components/icons";
 // import BattleArena from "../../components/BattleArena";
 import {useState} from "react";
 
@@ -14,10 +15,13 @@ export default function Battle() {
     const [type, setType] = useState(0);
     return (
         <div>
-            <HeaderComponent/>
-<SidePanel/>
-        <div style={{ display: 'flex', marginLeft: '13%', marginTop: '5%' }}>
-            <div>
+            <HeaderComponent chkPanel={true}/>
+
+            <SidePanel/>
+            <div className={styles.label}> <Label2/> </div>
+
+            <div style={{ display: 'flex', marginLeft: '13%', marginTop: '5%'}}>
+            <div className={styles.panel_main}>
             <div style={{display: 'flex'}}>
                 <div className="dropdown" style={{marginLeft: 'auto'}}>
                     <button className={clsx(styles['btn text-white'], styles.drp_btn)} type="button"
@@ -112,16 +116,18 @@ export default function Battle() {
             {/*</svg>*/}
 
 
-            <Row/>
-            <Row/>
-            <Row/>
-            <Row/>
-            <Row/>
-            <Row/>
-            <Row/>
-            <Row/>
-            <Row/>
-            <Row bg/>
+                <Row img={"/av9.png"} name = {'Роман Коробкин'} role = {'Транзистор'} chips = {'13567'} stars = {'3999'}/>
+                <Row img={"/av5.png"} name = {'Дамир Коровьев'} role = {'Транзистор'} chips = {'12754'} stars = {'3786'}/>
+                <Row img={"/av6.png"} name = {'Антон Столыпин'} role = {'Транзистор'} chips = {'12346'} stars = {'3567'}/>
+                <Row img={"/av7.png"} name = {'Вадим Алексеев'} role = {'Транзистор'} chips = {'11976'} stars = {'3566'}/>
+                <Row img={"/av1.png"} name = {'Алиса Шевелева'} role = {'Транзистор'} chips = {'12632'} stars = {'3200'}/>
+                <Row img={"/av8.png"} name = {'Артур Коробкин'} role = {'Транзистор'} chips = {'10978'} stars = {'3103'}/>
+                <Row img={"/av2.png"} name = {'Мария Цветаева'} role = {'Транзистор'} chips = {'9235'} stars = {'2726'}/>
+                <Row img={"/av3.png"} name = {'Диана Коробкин'} role = {'Транзистор'} chips = {'10245'} stars = {'2654'}/>
+                <Row img={"/av10.png"} name = {'Артём Тимофеев'} role = {'Транзистор'} chips = {'8432'} stars = {'2621'}/>
+
+                <Row img={"/av4.png"} name = {'Света Кулагина'} role = {'Транзистор'} chips = {'199'} stars = {'381'} bg/>
+                <Transition/>
             </div>
 
             <div className={styles.form_friends}>
@@ -140,6 +146,7 @@ export default function Battle() {
                     <PlayerComponent/>
                     <PlayerComponent/>
                     <PlayerComponent/>
+
                 </div>
 
 

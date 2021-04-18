@@ -2,17 +2,20 @@
 import HeaderComponent from '../components/HeaderComponent/'
 import SideBar from '../components/SideBar/'
 import PlayerChallenge from '../components/PlayerChallenge/'
-import {useState} from 'react'
+
+import {StartModal} from "../components/StartModal";
+
 
 export default function Home() {
-  const [panel, setPanel] = useState(true)
-  return (
-    <div >
-      <SideBar>
-        <HeaderComponent panel={panel}/>
-        <PlayerChallenge/>
-      </SideBar>
+    return (
+        <div>
+            <StartModal />
+            <SideBar>
+                <HeaderComponent/>
+                <PlayerChallenge/>
+            </SideBar>
 
-    </div>
-  )
+
+        </div>
+    )
 }

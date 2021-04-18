@@ -28,14 +28,14 @@ export default function SidePanel ({children}){
             </div>
           </a>
         </Link>
-        <Link href='/'>
+        <Link href='/rating'>
           <a>
            <div className={clsx(styles['par'], pathname === '/2' && styles['p'])}>
             <img alt='game' src={'./bx-bar-chart-alt-2.svg'} className={clsx(styles['barImag'])}/>
            </div>
           </a>
         </Link>
-        <Link href='/'>
+        <Link href='/leags'>
           <a>
             <div className={clsx(styles['par'], pathname === '/3' && styles['p'])}>
               <img alt='game' src={'./bx-trophy.svg'} className={clsx(styles['barImag'])}/>

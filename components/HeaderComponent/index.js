@@ -5,9 +5,11 @@ import {FastGame} from '../Pop-up/FastGame/'
 import {useState} from 'react'
 
 
+
 export default function HeaderComponent ({children, chkPanel = false, panel, title}){
 
   const[fastActive, setFastActive] = useState(false);
+
   return(
     <>
 

@@ -1,0 +1,13 @@
+query getResponsesBattles ($id: ID!){
+    battles(first: 20, userId: $id, affiliation: FROM_ME, battleStatus: RECEIVING_AWAITING) {
+        nodes {
+            receiver{
+                balance
+                experience
+                id
+                username
+            }
+            id
+        }
+    }
+}

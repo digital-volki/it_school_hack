@@ -10,9 +10,7 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head title={'s'}>
-                    <title>
-                        d
-                    </title>
+
                 </Head>
                 <body>
                 <Main/>

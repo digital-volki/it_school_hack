@@ -1,0 +1,16 @@
+query getAllUsers($id: ID!) {
+    allUsers(userId: $id) {
+        nodes {
+            balance
+            battles {
+                endDate
+                id
+            }
+            energe
+            experience
+            id
+            league
+            username
+        }
+    }
+}

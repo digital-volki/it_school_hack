@@ -1,8 +1,7 @@
-require('webpack');
+const webpack = require('webpack');
 const withOffline = require('next-offline')
 
-
-module.exports = (phase, {defaultConfig}) => () => {
+module.exports = (phase, { defaultConfig }) => {
 
     // const pwa = withPWA({
     //     pwa: {
@@ -11,10 +10,8 @@ module.exports = (phase, {defaultConfig}) => () => {
     //         skipWaiting: true
     //     }
     // })
-    return withOffline({
-        ...Object.assign({}, defaultConfig, {
+    return withOffline({...Object.assign({}, defaultConfig, {
             webpack(config, options) {
-
                 config.module.rules.push({
                     test: /\.(graphql|gql)$/,
                     use: [require.resolve('graphql-tag/loader')]
@@ -31,10 +28,9 @@ module.exports = (phase, {defaultConfig}) => () => {
 
                 return config;
             }
-        }), pwa: {
+        }), pwa:{
             dest: "public",
             register: true,
             skipWaiting: true
-        }
-    });
+        }});
 }
