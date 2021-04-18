@@ -20,6 +20,7 @@ import {useUserCtx} from "../../components/UserMiddleware";
 
 
 export default function Battle() {
+  const [panel, setPanel] = useState(true)
 
     const {query} = useRouter()
     const { id: bid } = query
@@ -81,7 +82,7 @@ export default function Battle() {
                 })
             }
         })}>
-            <HeaderComponent/>
+            <HeaderComponent panel={true}/>
             <div className={'d-flex bg-l-bg mx-5 rounded row '}>
                 <div className={clsx(styles['playerChallenge'])}>
                     <div className={clsx(styles['playerChallengeHeader'])}>
