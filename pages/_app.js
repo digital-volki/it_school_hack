@@ -1,11 +1,19 @@
-import '../styles/globals.scss'
 import App from "next/app";
+import dynamic from "next/dynamic";
+import '../styles/globals.scss'
+
 import {Provider} from "../components/GeneralCtx";
+
+const UserMiddleware = dynamic(() => import('../components/UserMiddleware'), {ssr: false})
+// import {UserMiddleware} from "../components/UserMiddleware";
+
 
 function MyApp({Component, pageProps}) {
     return (
         <Provider props={pageProps}>
-            <Component {...pageProps} />
+            <UserMiddleware>
+                <Component {...pageProps} />
+            </UserMiddleware>
         </Provider>
 
     )

@@ -1,0 +1,12 @@
+mutation getSelf{
+    generateUser{
+        value {
+            id
+            username
+            balance
+            experience
+            league
+            energe
+        }
+    }
+}

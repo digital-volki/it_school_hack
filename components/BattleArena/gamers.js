@@ -1,24 +1,25 @@
 import styles from './battle.module.scss'
 import clsx from "clsx";
 import Link from 'next/link'
+import {leagues} from "../../lib/consts";
 
-export const GamersComponent = ({ type }) =>{
+export const GamersComponent = ({ username, league, balance, experience }) =>{
   return(
     <>
       <div className={clsx(styles['playerComponent'])}>
         <div className={clsx(styles['dateAcc'])}>
           <img alt='vladphoto' src={'./vlad.png'} className={clsx(styles['avatar'])}/>
 
-            <p className={clsx(styles['Info2'])}>Влад Шкердин</p>
+            <p className={clsx(styles['Info2'])}>{username}</p>
 
           <div className={clsx(styles['allTRan'])}>
             <img alt='transistor' src={'/transistor.svg'} className={clsx(styles['chipimg'])}/>
-            <p className={clsx(styles['Transistor'])}>Транзистор</p>
+            <p className={clsx(styles['Transistor'])}>{leagues[league]}</p>
           </div>
           <div className={clsx(styles['dateAcc1'])}>
-            <p className={clsx(styles['Info'])}>300</p>
+            <p className={clsx(styles['Info'])}>{balance}</p>
             <img alt='chip' src={'/bx-chip.svg'} className={clsx(styles['chipimg'])}/>
-            <p className={clsx(styles['Info'])}>300</p>
+            <p className={clsx(styles['Info'])}>{experience}</p>
             <img alt='chip' src={'/bx-star.svg'} className={clsx(styles['chipimg'])}/>
 
           </div>
