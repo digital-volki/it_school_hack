@@ -6,10 +6,9 @@ import {useEffect} from "react";
 
 export const StartModal = ({oid = "VXNlcgpnMGJlZGZiMDAyMmFhNDYwZmJiNTMzMzg1Y2JlMDc5MWU="}) => {
 
-    // const [] = useMutation()
-
     const {push} = useRouter()
-    const {ctx: {id}} = useUserCtx()
+    const {ctx} = useUserCtx()
+    console.log(ctx.id)
     const [create, {data, loading}] = useMutation(CREATE_BATTLE)
 
     useEffect(() => typeof data !== 'undefined' && push(`/battle/${data?.callBattle?.value?.id}`).then(() => {}), [data])
@@ -32,10 +31,10 @@ export const StartModal = ({oid = "VXNlcgpnMGJlZGZiMDAyMmFhNDYwZmJiNTMzMzg1Y2JlM
                         <button type="button" className="btn btn-secondary-outline text-white"
                                 data-bs-dismiss="modal">Отмена
                         </button>
-                        <button type="button" className="btn btn-success" onClick={async () => {
+                        <button data-bs-dismiss="modal" type="button" className="btn btn-success" onClick={async () => {
                             await create({
                                 variables: {
-                                    id,
+                                    id: ctx?.id,
                                     oid
                                 }
                             })
