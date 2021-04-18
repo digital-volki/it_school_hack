@@ -1,0 +1,13 @@
+query getRequestsButtles ($id: ID!){
+    battles(first: 20, userId: $id, affiliation: TO_ME, battleStatus: RECEIVING_AWAITING) {
+        nodes {
+            caller{
+                balance
+                experience
+                id
+                username
+            }
+            id
+        }
+    }
+}

@@ -1,0 +1,7 @@
+mutation createBattle ($id: ID!, $oid: ID!){
+    callBattle(opponentId: $oid, userId: $id) {
+        value {
+            id
+        }
+    }
+}

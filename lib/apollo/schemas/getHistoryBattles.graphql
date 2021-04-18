@@ -1,0 +1,23 @@
+query getHistoryButtles ($id: ID!){
+    battles(first: 20, userId: $id, affiliation: null, battleStatus: COMPLETED) {
+        nodes {
+            results {
+                res
+                userId
+            }
+            caller{
+                balance
+                experience
+                id
+                username
+            }
+            receiver {
+                balance
+                experience
+                id
+                username
+            }
+            id
+        }
+    }
+}
